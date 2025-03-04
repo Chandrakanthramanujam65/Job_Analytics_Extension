@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Job Match Analyzer",
+  "version": "1.0",
+  "description": "Analyze job postings and match them with your resume.",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/image16.png",
+      "48": "icons/image48.png",
+      "128": "icons/image128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/*", "*://*.indeed.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

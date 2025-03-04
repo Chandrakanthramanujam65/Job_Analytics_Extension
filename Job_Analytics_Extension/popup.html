@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Match Analyzer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Job Match Analyzer</h1>
+    <textarea
+      id="resumeText"
+      placeholder="Paste your resume text here..."
+    ></textarea>
+    <button id="analyzeButton">Analyze Job Posting</button>
+    <div id="results">
+      <p>
+        <strong>Match Percentage:</strong> <span id="matchPercentage">0%</span>
+      </p>
+      <p><strong>Required Skills:</strong> <span id="requiredSkills"></span></p>
+      <p><strong>Missing Skills:</strong> <span id="missingSkills"></span></p>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
